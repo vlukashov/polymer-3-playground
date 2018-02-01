@@ -1,2 +1,5 @@
 # auto-generated with `yarn install`
 node_modules
+
+# auto-generated with `yarn build`
+build
