@@ -1,0 +1,10 @@
+{
+  "name": "polymer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "flat": true,
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.7"
+  }
+}

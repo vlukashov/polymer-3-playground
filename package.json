@@ -5,11 +5,13 @@
   "author": "Viktor Lukashov <viktor@vaadin.com>",
   "license": "MIT",
   "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.7",
     "clean-webpack-plugin": "^0.1.18",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.10.0"
   },
   "scripts": {
+    "install": "cd polymer && yarn install",
     "build": "webpack --config webpack.config.js"
   }
 }
