@@ -9,11 +9,14 @@
     "@stencil/router": "^0.0.23",
     "clean-webpack-plugin": "^0.1.18",
     "copy-webpack-plugin": "^4.3.1",
+    "google-closure-compiler": "^20180101.0.0",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.10.0"
   },
   "scripts": {
     "install": "cd polymer && yarn install",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "minify": "cd build && java -jar ../node_modules/google-closure-compiler/compiler.jar --js bundle.js --compilation_level ADVANCED --language_in ECMASCRIPT6 --language_out ECMASCRIPT6 --js_output_file bundle.min.js --create_source_map bundle.min.js.map --externs ../src/externs.js && yarn add-source-maps-url",
+    "add-source-maps-url": "echo \"//# sourceMappingURL=bundle.min.js.map\" >> build/bundle.min.js"
   }
 }
